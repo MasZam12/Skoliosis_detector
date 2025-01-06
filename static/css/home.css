@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  background: #ffff;
+  font-family: sans-serif;
+}
+
+header nav {
+  text-align: center;
+  padding: 0.5rem 3%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
+  background-color: #ffffff;
+}
+
+header nav .navbar-logo h2 {
+    font-size: 3rem;
+    color: #8f48d2;
+}
+
+main .hero {
+    padding: 5rem 7%;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+main .hero .content-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+}
+
+main .hero .content-container .text {
+    display: inline-block;
+}
+
+main .hero .content-container .text h2 {
+    font-size: 2.5rem;
+    color: #8f48d2;
+}
+
+main .hero .content-container .text p {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+
+main .hero .content-container .text a .btn {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background-color: #8f48d2;
+    color: #ffff;
+    border: 1px solid #8f48d2;
+    cursor: pointer;
+}
+
+main .hero .content-container .text a .btn:hover {
+    background: #ffff;
+    color: #8f48d2;
+    border: 1px solid #8f48d2;
+}
+
+main .hero .content-container .img img {
+    width: 500px;
+}

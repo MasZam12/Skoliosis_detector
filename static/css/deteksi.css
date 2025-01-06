@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  background: #e8e8e8;
+  font-family: sans-serif;
+}
+
+/* Section Hero */
+main .hero {
+  height: 100vh;
+}
+
+main .hero .content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+}
+
+main .hero .content-container h2 {
+  font-size: 3rem;
+}
+
+.card {
+  --bg-card: #ffff;
+  --primary: #6d28d9;
+  --primary-800: #e8e8e8;
+  --primary-shadow: #2e1065;
+  --light: #d9d9d9;
+  --zinc-800: #18181b;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border-radius: 1rem;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+.image_container {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  width: 300px;
+  height: 300px;
+  background-color: var(--primary-800);
+  border-radius: 0.5rem;
+}
+
+.image_container .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 3rem;
+  fill: var(--light);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.button {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #301779;
+  background-color: #382099;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 80%;
+  text-align: center;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(50px);
+  height: 100%;
+  width: 40px;
+  right: 0;
+  background-color: #171979;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.button:hover {
+  background: #172779;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 290px;
+  transform: translateX(100);
+}
+
+.button:active .button__icon {
+  background-color: #146c54;
+}
+
+.button:active {
+  border: 1px solid #146c54;
+}
+
+main .hero .content-container a .upload-image {
+  margin-top: 1.5rem;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  width: 200px;
+  background-color: #8f48d2;
+  color: #ffff;
+  border: 1px solid #8f48d2;
+  cursor: pointer;
+}
+
+main .hero .content-container a .upload-image:hover {
+  background: #ffff;
+  color: #8f48d2;
+  border: 1px solid #8f48d2;
+}
+/* Section Hero */
+
+/* Section Result */
+main .result {
+  height: 100vh;
+}
+
+main .result .result-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 700px;
+}
+
+main .result .result-container h2 {
+  font-size: 3rem;
+}
+
+main .result .result-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+/* Card Deteksi Tepi */
+main .result .result-container .row .card-deteksi-tepi {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  padding: 1rem;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+main .result .result-container .row .card-deteksi-tepi h3 {
+  text-align: center;
+}
+
+main .result .result-container .row  .card-deteksi-tepi .image_container1 {
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Card Histogram */
+main .result .result-container .row .card-histogram {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  padding: 1rem;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+main .result .result-container .row .card-histogram h3 {
+  text-align: center;
+}
+
+main .result .result-container .row  .card-histogram .image_container1 {
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Card Segement */
+main .result .result-container .row .card-segment {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  padding: 1rem;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+main .result .result-container .row .card-segment h3 {
+  text-align: center;
+}
+
+main .result .result-container .row  .card-segment .image_container1 {
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Card Diagnosis */
+main .result .result-container .row .card-diagnosis {
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  padding: 1rem;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+main .result .result-container .row .card-diagnosis h3 {
+  text-align: center;
+}
+
+main .result .result-container .row  .card-diagnosis .image_container1 {
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

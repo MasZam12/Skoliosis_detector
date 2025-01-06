@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/deteksi.css" />
+    <title>Deteksi</title>
+  </head>
+  <body>
+    <main>
+
+      <section class="hero">
+        <div class="content-container">
+          <h2>Silahkan Upload Foto!</h2>
+          <div class="card">
+            <div class="image_container">
+              <svg
+                class="image"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="action">
+              <button type="button" class="button" id="upload-button">
+                <span class="button__text">Upload Image</span>
+              </button>
+            </div>
+          </div>
+          <input
+            type="file"
+            id="upload"
+            style="display: none"
+            accept="image/*"
+          />
+          <a href="#" class="">
+            <button id="periksa-button" class="upload-image">Periksa</button>
+          </a>
+        </div>
+      </section>
+
+      <section class="result">
+        <div class="result-container">
+          <h2>Hasil</h2>
+          <div class="row">
+            <div class="card-deteksi-tepi">
+              <h3>Hasil Deteksi Tepi</h3>
+              <div class="image_container1">
+                <img id="edge-image" class="image-card" src="{{ edges_url }}" alt="Hasil Deteksi Tepi"/>
+              </div>
+            </div>
+            <div class="card-histogram">
+              <h3>Hasil Histogram</h3>
+              <div class="image_container1">
+                <img id="histogram-image" class="image" src="{{ blurred_url }}" alt="Hasil Histogram"/>
+              </div>
+            </div>
+            <div class="card-segment">
+              <h3>Hasil Segmentasi</h3>
+              <div class="image_container1">
+                <img id="segment-image" class="image" src="{{ equalized_url }}" alt="Hasil Segmentasi"/>
+              </div>
+            </div>
+            <div class="card-diagnosis">
+              <h3>Hasil Diagnosa</h3>
+              <div class="image_container1">
+                <img id="diagnosis-image" class="image" src="{{ result_url }}" alt="Hasil Diagnosis"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>      
+      
+    </main>
+
+    <script src="../static/js/deteksi.js"></script>
+  </body>
+</html>
