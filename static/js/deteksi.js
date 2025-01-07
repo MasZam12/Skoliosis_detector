@@ -26,7 +26,7 @@ document.getElementById("upload").addEventListener("change", function (event) {
       const svgElement = imageContainer.querySelector("svg");
       if (svgElement) {
         svgElement.style.display = "none";
-        console.log("asu");
+        console.log("SVG disembunyikan");
       }
 
       const imgTag = document.createElement("img");
@@ -72,10 +72,9 @@ document
           document.getElementById("histogram-image").src = data.blurred_url;
           document.getElementById("segment-image").src = data.equalized_url;
           document.getElementById("diagnosis-image").src = data.result_url;
-          document.getElementById("angle").textContent = data.angle;
           document.getElementById("hasil").innerHTML = `
               <div class="angle" id="angle">
-                <p>Angle: ${data.angle}</p>
+                <p>Angle: ${Math.floor(data.angle)}</p>
               </div>
               <div class="hasil-diagnosa" id="hasil-diagnosa">
                 <p>Hasil Diagnosis: ${data.diagnosis}</p>
