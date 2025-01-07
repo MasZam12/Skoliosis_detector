@@ -9,8 +9,8 @@
 
 body {
   /* background: #e8e8e8; */
-  background: #ffff;
-  font-family: sans-serif;
+  background: #967bb6;
+  font-family: "Poppins";
 }
 
 /* Navbar */
@@ -74,7 +74,7 @@ main .hero .content-container h2 {
   padding: 1rem;
   background-color: var(--bg-card);
   border-radius: 1rem;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .image_container {
@@ -122,7 +122,7 @@ main .hero .content-container h2 {
   background-color: #382099;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .button,
@@ -199,7 +199,7 @@ main .hero .content-container a .upload-image:hover {
 
 /* Section Result */
 main .result {
-  /* height: 100vh; */
+  min-height: 150vh;
   padding: 5rem 7%;
 }
 
@@ -225,8 +225,8 @@ main .result .result-container .row {
 
 /* Card Deteksi Tepi */
 main .result .result-container .row .card-deteksi-tepi {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -234,7 +234,7 @@ main .result .result-container .row .card-deteksi-tepi {
   flex-direction: column;
   background-color: #ffff;
   padding: 1rem;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);;
 }
 
 main .result .result-container .row .card-deteksi-tepi h3 {
@@ -242,8 +242,8 @@ main .result .result-container .row .card-deteksi-tepi h3 {
 }
 
 main .result .result-container .row  .card-deteksi-tepi .image_container1 {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -256,8 +256,8 @@ main .result .result-container .row  .card-deteksi-tepi .image_container1 {
 
 /* Card Histogram */
 main .result .result-container .row .card-histogram {
-  width: 400px;
-  height: 400px;
+  width: 700px;
+  height: 600px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -265,7 +265,7 @@ main .result .result-container .row .card-histogram {
   flex-direction: column;
   background-color: #ffff;
   padding: 1rem;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 main .result .result-container .row .card-histogram h3 {
@@ -273,8 +273,8 @@ main .result .result-container .row .card-histogram h3 {
 }
 
 main .result .result-container .row  .card-histogram .image_container1 {
-  width: 350px;
-  height: 350px;
+  width: 650px;
+  height: 550px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -287,8 +287,8 @@ main .result .result-container .row  .card-histogram .image_container1 {
 
 /* Card Segement */
 main .result .result-container .row .card-segment {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -296,7 +296,7 @@ main .result .result-container .row .card-segment {
   flex-direction: column;
   background-color: #ffff;
   padding: 1rem;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 main .result .result-container .row .card-segment h3 {
@@ -304,8 +304,38 @@ main .result .result-container .row .card-segment h3 {
 }
 
 main .result .result-container .row  .card-segment .image_container1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+  padding: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+main .result .result-container .row .card-blurred {
   width: 350px;
   height: 350px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffff;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+main .result .result-container .row .card-blurred h3 {
+  text-align: center;
+}
+
+main .result .result-container .row  .card-blurred .image_container1 {
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -325,7 +355,7 @@ main .diagnosa {
 }
 
 main .diagnosa .content-container .row{
-  background-color: #e8e8e8;
+  /* background-color: #e8e8e8; */
   width: 900px;
   height: 700px;
   display: flex;
@@ -347,7 +377,7 @@ main .diagnosa .content-container .row .hasil {
   gap: 10px;
   border-radius: 10px;
   background: #ffff;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 main .diagnosa .content-container .row .hasil .angle {
@@ -383,7 +413,7 @@ main .diagnosa .content-container .row .card-diagnosis {
   flex-direction: column;
   background-color: #ffff;
   padding: 1rem;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 main .diagnosa .content-container .row .card-diagnosis h3 {

@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../static/css/deteksi.css" />
     <title>Deteksi</title>
   </head>
@@ -13,11 +19,10 @@
           <div class="navbar-logo">
             <h2>Skoliosis Detector</h2>
           </div>
-          <div class="navbar-nav">
-            <a href="#">Beranda</a>
-            <a href="../templates/deteksi.html">Deteksi</a>
-            <a href="../templates/about.html">Tentang</a>
-          </div>
+          <!-- <div class="navbar-nav">
+            <a href="home.html">Beranda</a>
+            <a href="#">Deteksi</a>
+          </div> -->
         </nav>
       </header>
 
@@ -69,17 +74,6 @@
                 />
               </div>
             </div>
-            <div class="card-histogram">
-              <h3>Hasil Histogram</h3>
-              <div class="image_container1">
-                <img
-                  id="histogram-image"
-                  class="image"
-                  src="{{ blurred_url }}"
-                  alt="Hasil Histogram"
-                />
-              </div>
-            </div>
             <div class="card-segment">
               <h3>Hasil Segmentasi</h3>
               <div class="image_container1">
@@ -88,6 +82,28 @@
                   class="image"
                   src="{{ equalized_url }}"
                   alt="Hasil Segmentasi"
+                />
+              </div>
+            </div>
+            <div class="card-blurred">
+              <h3>Hasil Blur</h3>
+              <div class="image_container1">
+                <img
+                  id="blurred-image"
+                  class="image"
+                  src="{{ blurred_url }}"
+                  alt="Hasil Blurred"
+                />
+              </div>
+            </div>
+            <div class="card-histogram">
+              <h3>Hasil Histogram</h3>
+              <div class="image_container1">
+                <img
+                  id="histogram-image"
+                  class="image"
+                  src="{{ histogram_url }}"
+                  alt="Hasil Histogram"
                 />
               </div>
             </div>
@@ -113,6 +129,7 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <script src="../static/js/deteksi.js"></script>

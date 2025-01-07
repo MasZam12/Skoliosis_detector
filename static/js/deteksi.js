@@ -69,8 +69,9 @@ document
           console.log(data);
 
           document.getElementById("edge-image").src = data.edges_url;
-          document.getElementById("histogram-image").src = data.blurred_url;
+          document.getElementById("histogram-image").src = data.histogram_url;
           document.getElementById("segment-image").src = data.equalized_url;
+          document.getElementById("blurred-image").src = data.blurred_url;
           document.getElementById("diagnosis-image").src = data.result_url;
           document.getElementById("hasil").innerHTML = `
               <div class="angle" id="angle">

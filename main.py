@@ -6,6 +6,7 @@ from fastapi.templating import Jinja2Templates
 import os
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
 app = FastAPI()
 
@@ -41,6 +42,22 @@ def diagnosa_skoliosis(angle):
     else:
         return "Skoliosis Berat"
 
+def buat_histogram(image, filename):
+    histogram, bins = np.histogram(image.flatten(), bins=256, range=[0, 256])
+    plt.figure()
+    plt.title("Histogram")
+    plt.xlabel("Pixel Intensity")
+    plt.ylabel("Frequency")
+    plt.plot(histogram, color='black')
+    plt.xlim([0, 256])
+    plt.grid()
+
+    histogram_filename = f"histogram_{filename}.png"
+    histogram_path = os.path.join(RESULT_FOLDER, histogram_filename)
+    plt.savefig(histogram_path)
+    plt.close()
+    return histogram_filename
+
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
@@ -53,7 +70,7 @@ async def deteksi(request: Request):
 async def upload_file(request: Request, file: UploadFile = File(...)):
     if not file.filename.lower().endswith(('.jpg', '.jpeg', '.png')):
         raise HTTPException(status_code=400, detail="Invalid file format. Please upload a JPG or PNG image.")
-    
+
     file_path = os.path.join(UPLOAD_FOLDER, file.filename)
     with open(file_path, "wb") as f:
         f.write(await file.read())
@@ -61,8 +78,11 @@ async def upload_file(request: Request, file: UploadFile = File(...)):
     img = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
     if img is None:
         raise HTTPException(status_code=400, detail="Failed to read image.")
-    
+
     try:
+        # Generate and save histogram
+        histogram_filename = buat_histogram(img, file.filename)
+
         blurred = cv2.GaussianBlur(img, (5, 5), 0)
         blurred_filename = f"blurred_{file.filename}"
         blurred_path = os.path.join(RESULT_FOLDER, blurred_filename)
@@ -95,6 +115,7 @@ async def upload_file(request: Request, file: UploadFile = File(...)):
             cv2.imwrite(result_path, img_result)
 
             return {
+                "histogram_url": f"/results/{histogram_filename}",
                 "blurred_url": f"/results/{blurred_filename}",
                 "equalized_url": f"/results/{equalized_filename}",
                 "edges_url": f"/results/{edges_filename}",
