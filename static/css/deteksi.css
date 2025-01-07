@@ -8,13 +8,43 @@
 }
 
 body {
-  background: #e8e8e8;
+  /* background: #e8e8e8; */
+  background: #ffff;
   font-family: sans-serif;
+}
+
+/* Navbar */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
+  background-color: #ffffff;
+}
+
+header nav .navbar-logo h2 {
+  font-size: 2.2rem;
+  color: #8f48d2;
+}
+
+header nav .navbar-nav a {
+    margin: 1.5rem;
+    color: #000;
+    font-family: "Poppins";
+    font-size: 1.2rem;
 }
 
 /* Section Hero */
 main .hero {
   height: 100vh;
+  padding: 5rem 7%;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 main .hero .content-container {
@@ -169,7 +199,8 @@ main .hero .content-container a .upload-image:hover {
 
 /* Section Result */
 main .result {
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 5rem 7%;
 }
 
 main .result .result-container {
@@ -194,8 +225,8 @@ main .result .result-container .row {
 
 /* Card Deteksi Tepi */
 main .result .result-container .row .card-deteksi-tepi {
-  width: 350px;
-  height: auto;
+  width: 400px;
+  height: 400px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -211,8 +242,8 @@ main .result .result-container .row .card-deteksi-tepi h3 {
 }
 
 main .result .result-container .row  .card-deteksi-tepi .image_container1 {
-  width: 290px;
-  height: 290px;
+  width: 350px;
+  height: 350px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -225,8 +256,8 @@ main .result .result-container .row  .card-deteksi-tepi .image_container1 {
 
 /* Card Histogram */
 main .result .result-container .row .card-histogram {
-  width: 350px;
-  height: auto;
+  width: 400px;
+  height: 400px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -242,8 +273,8 @@ main .result .result-container .row .card-histogram h3 {
 }
 
 main .result .result-container .row  .card-histogram .image_container1 {
-  width: 290px;
-  height: 290px;
+  width: 350px;
+  height: 350px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -256,8 +287,8 @@ main .result .result-container .row  .card-histogram .image_container1 {
 
 /* Card Segement */
 main .result .result-container .row .card-segment {
-  width: 350px;
-  height: auto;
+  width: 400px;
+  height: 400px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -273,8 +304,8 @@ main .result .result-container .row .card-segment h3 {
 }
 
 main .result .result-container .row  .card-segment .image_container1 {
-  width: 290px;
-  height: 290px;
+  width: 350px;
+  height: 350px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -285,10 +316,66 @@ main .result .result-container .row  .card-segment .image_container1 {
   margin-top: 10px;
 }
 
+/* Section Diagnosa */
+main .diagnosa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main .diagnosa .content-container .row{
+  background-color: #e8e8e8;
+  width: 900px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.4rem;
+  border-radius: 15px;
+}
+
+main .diagnosa .content-container .row .hasil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  height: 200px;
+  width: 500px;
+  gap: 10px;
+  border-radius: 10px;
+  background: #ffff;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+
+main .diagnosa .content-container .row .hasil .angle {
+  width: 80%;
+  height: 100px;
+}
+
+main .diagnosa .content-container .row .hasil .angle p {
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+main .diagnosa .content-container .row .hasil .hasil-diagnosa {
+  width: 80%;
+  height: 100px;
+}
+
+main .diagnosa .content-container .row .hasil .hasil-diagnosa p {
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
 /* Card Diagnosis */
-main .result .result-container .row .card-diagnosis {
-  width: 350px;
-  height: auto;
+main .diagnosa .content-container .row .card-diagnosis {
+  width: 400px;
+  height: 400px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -299,13 +386,13 @@ main .result .result-container .row .card-diagnosis {
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
 
-main .result .result-container .row .card-diagnosis h3 {
+main .diagnosa .content-container .row .card-diagnosis h3 {
   text-align: center;
 }
 
-main .result .result-container .row  .card-diagnosis .image_container1 {
-  width: 290px;
-  height: 290px;
+main .diagnosa .content-container .row  .card-diagnosis .image_container1 {
+  width: 350px;
+  height: 350px;
   border-radius: 5px;
   display: flex;
   justify-content: center;

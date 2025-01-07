@@ -9,11 +9,13 @@
 
 body {
   background: #ffff;
-  font-family: sans-serif;
+  font-family: "Poppins";
 }
 
 header nav {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.5rem 3%;
   position: fixed;
   top: 0px;
@@ -24,54 +26,61 @@ header nav {
 }
 
 header nav .navbar-logo h2 {
-    font-size: 3rem;
-    color: #8f48d2;
+  font-size: 2.2rem;
+  color: #8f48d2;
+}
+
+header nav .navbar-nav a {
+    margin: 1.5rem;
+    color: #000;
+    font-family: "Poppins";
+    font-size: 1.2rem;
 }
 
 main .hero {
-    padding: 5rem 7%;
-    max-width: 100%;
-    max-height: 100vh;
+  padding: 5rem 7%;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 main .hero .content-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 700px;
 }
 
 main .hero .content-container .text {
-    display: inline-block;
+  display: inline-block;
 }
 
 main .hero .content-container .text h2 {
-    font-size: 2.5rem;
-    color: #8f48d2;
+  font-size: 2.5rem;
+  color: #8f48d2;
 }
 
 main .hero .content-container .text p {
-    margin-top: 1.5rem;
-    font-size: 1.3rem;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
 }
 
 main .hero .content-container .text a .btn {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    background-color: #8f48d2;
-    color: #ffff;
-    border: 1px solid #8f48d2;
-    cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background-color: #8f48d2;
+  color: #ffff;
+  border: 1px solid #8f48d2;
+  cursor: pointer;
 }
 
 main .hero .content-container .text a .btn:hover {
-    background: #ffff;
-    color: #8f48d2;
-    border: 1px solid #8f48d2;
+  background: #ffff;
+  color: #8f48d2;
+  border: 1px solid #8f48d2;
 }
 
 main .hero .content-container .img img {
-    width: 500px;
+  width: 500px;
 }

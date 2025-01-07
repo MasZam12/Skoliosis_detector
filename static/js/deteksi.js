@@ -26,7 +26,7 @@ document.getElementById("upload").addEventListener("change", function (event) {
       const svgElement = imageContainer.querySelector("svg");
       if (svgElement) {
         svgElement.style.display = "none";
-        console.log("SVG disembunyikan");
+        console.log("asu");
       }
 
       const imgTag = document.createElement("img");
@@ -66,12 +66,24 @@ document
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Respon dari server:", data);
+          console.log(data);
 
           document.getElementById("edge-image").src = data.edges_url;
           document.getElementById("histogram-image").src = data.blurred_url;
           document.getElementById("segment-image").src = data.equalized_url;
           document.getElementById("diagnosis-image").src = data.result_url;
+          document.getElementById("angle").textContent = data.angle;
+          document.getElementById("hasil").innerHTML = `
+              <div class="angle" id="angle">
+                <p>Angle: ${data.angle}</p>
+              </div>
+              <div class="hasil-diagnosa" id="hasil-diagnosa">
+                <p>Hasil Diagnosis: ${data.diagnosis}</p>
+              </div>
+            </div>
+          `;
+
+          console.log(data.diagnosis);
         })
 
         .catch((error) => {

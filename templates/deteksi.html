@@ -8,6 +8,18 @@
   </head>
   <body>
     <main>
+      <header>
+        <nav>
+          <div class="navbar-logo">
+            <h2>Skoliosis Detector</h2>
+          </div>
+          <div class="navbar-nav">
+            <a href="#">Beranda</a>
+            <a href="../templates/deteksi.html">Deteksi</a>
+            <a href="../templates/about.html">Tentang</a>
+          </div>
+        </nav>
+      </header>
 
       <section class="hero">
         <div class="content-container">
@@ -49,31 +61,58 @@
             <div class="card-deteksi-tepi">
               <h3>Hasil Deteksi Tepi</h3>
               <div class="image_container1">
-                <img id="edge-image" class="image-card" src="{{ edges_url }}" alt="Hasil Deteksi Tepi"/>
+                <img
+                  id="edge-image"
+                  class="image-card"
+                  src="{{ edges_url }}"
+                  alt="Hasil Deteksi Tepi"
+                />
               </div>
             </div>
             <div class="card-histogram">
               <h3>Hasil Histogram</h3>
               <div class="image_container1">
-                <img id="histogram-image" class="image" src="{{ blurred_url }}" alt="Hasil Histogram"/>
+                <img
+                  id="histogram-image"
+                  class="image"
+                  src="{{ blurred_url }}"
+                  alt="Hasil Histogram"
+                />
               </div>
             </div>
             <div class="card-segment">
               <h3>Hasil Segmentasi</h3>
               <div class="image_container1">
-                <img id="segment-image" class="image" src="{{ equalized_url }}" alt="Hasil Segmentasi"/>
-              </div>
-            </div>
-            <div class="card-diagnosis">
-              <h3>Hasil Diagnosa</h3>
-              <div class="image_container1">
-                <img id="diagnosis-image" class="image" src="{{ result_url }}" alt="Hasil Diagnosis"/>
+                <img
+                  id="segment-image"
+                  class="image"
+                  src="{{ equalized_url }}"
+                  alt="Hasil Segmentasi"
+                />
               </div>
             </div>
           </div>
         </div>
-      </section>      
-      
+      </section>
+
+      <section class="diagnosa">
+        <div class="content-container">
+          <div class="row">
+            <div class="card-diagnosis">
+              <h3>Hasil Diagnosa</h3>
+              <div class="image_container1">
+                <img
+                  id="diagnosis-image"
+                  class="image"
+                  src="{{ result_url }}"
+                  alt="Hasil Diagnosis"
+                />
+              </div>
+            </div>
+            <div class="hasil" id="hasil"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="../static/js/deteksi.js"></script>
